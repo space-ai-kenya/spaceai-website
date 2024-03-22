@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  webapp:
+    container_name: space-frontend
+    build:
+      context: ./spaceai/.
+    ports:
+      - "8000:8000"
+    volumes: 
+      - ./spaceai/.:/var/www/.
+    command: >
+      sh -c "python manage.py collectstatic --noinput && uvicorn spaceai.asgi:application --host 0.0.0.0"
+
+    
+

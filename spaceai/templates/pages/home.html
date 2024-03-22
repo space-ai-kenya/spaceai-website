@@ -1,0 +1,357 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+<!-- header -->
+{% block header %}
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img class="" src="{% static 'images/logo.svg' %}" alt="Logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item dropdown mm-menu">
+                        <a class="nav-link page-scroll" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mm-menu">
+                        <a class="nav-link page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown mm-menu">
+                        <a class="nav-link page-scroll" href="#feature">Features</a>
+                    </li>
+                    <li class="nav-item dropdown mm-menu">
+                        <a class="nav-link page-scroll" href="#solution">Our Solution</a>
+                    </li>
+                    <li class="nav-item dropdown mm-menu">
+                        <a class="nav-link page-scroll" href="#footer2">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+{% endblock %} 
+
+{% block content %}
+<!-- intro section -->
+<div class="intro intro1">
+    <div class="container-fluid ">
+        <div class="row center-content ">
+            <div class="col-md-6 blue">
+                <h2>Reimagining Value Chain Service Networks</h2>
+                <p>SpaceAI is an open data platform that leverages advanced digital agent networks to enhance
+                    service engagement to the last mile, by automating service networks, rewarding service
+                    fulfillment & enhancing the value of any agent network
+                </p>
+                <!-- <a href="#" ><img src="{% static 'images/know_more.svg' %}" class="img-responsive" alt=""></a> -->
+                <br>
+                <br>
+                <img src="{% static 'images/microsoft.svg' %}" class="img-responsive" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About section  -->
+<div id="about" class="container">
+    <div class="space100"></div>
+    <!-- INFO CONTENT -->
+    <div class="info-content">
+        <div class="container">
+            <div class="row center-content">
+                <div class="col-md-6">
+                    <h3 style="color: #02407B;">Intentional focus in Advanced Simplicity</h3>
+                    <img src="{% static 'images/skwigli_line.svg' %}" class="img-responsive img-fluid d-block mx-auto" alt=""><br>
+                    <p>
+                        Our mission is to automate and enhance value chains in diverse 
+                        industries. We are dedicated to designing and curating streamlined
+                        processes that enable seamless data collection and service interactions while prioritizing convenience
+                    </p>
+                    <strong>
+                        <p>Learn more about our journey, our vision for the future, and the passionate team making it all possible</p>
+                    </strong>
+                    <div class="space30"></div>
+
+                    <!-- <a href="#" ><img src="{% static 'images/learn_more.svg' %}" class="img-responsive" alt=""></a> -->
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/look_into_social.svg' %}" class="pull-right img-fluid d-block mx-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+<!-- services -->
+<section id="feature" class="services bg-light">
+    <div class="container-fluid">
+        <div class="about-inline text-center">
+            <h3 style="color: #02407B;">Our Platform</h3>
+            <img src="{% static 'images/skwigli_line.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+            <p>
+                Our platform aggregates real time data, support service exchange & generate behavioral insights to help actors achieve goals across value chains
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-6">
+                    <div class="box-body d-flex Protem-feature">
+                        <img src="{% static 'images/icon_1.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                        <div class="Protem-feature">
+                            <h3 class="mb-3">Conversational AI for Last mile Data</h3>
+                            <p>We provide a decentralized, yet holistic agent network built on easy-to-use conversational platforms. SpaceAI connects value creators across value chains to facilitate real-time access to key services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <!-- <div class="col-md-6">
+                    <div class="box-body d-flex Protem-feature">
+                        <img src="{% static 'images/icon_2.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                        <div class="Protem-feature">
+                            <h3>Monitoring, Reporting &  Validation</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="space30"></div>
+            </div>
+            <div class="row">
+                <!-- Column 3 -->
+                <!-- <div class="col-md-6">
+                <div class="box-body d-flex Protem-feature">
+                    <img src="{% static 'images/icon_3.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                    <div class="Protem-feature">
+                        <h3>Design Led Value Creation</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
+                        </div>
+                    </div>
+                </div> -->
+        
+                <!-- Column 4 -->
+                <!-- <div class="col-md-6">
+                    <div class="box-body d-flex Protem-feature">
+                        <img src="{% static 'images/icon_4.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                        <div class="Protem-feature">
+                            <h3>Embedded Finance</h3>
+                            <p class="m-t-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="space30"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- use cases section -->
+<div class="intro intro-why">
+    <div class="space100"></div>
+    <div class="row center-content">
+        <div class="container">
+            <div class="col-md-9 why about-inline text-center">
+                <h1>Use Cases _Dairy Value Chain</h1> 
+                <img src="{% static 'images/skwigli_line.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                <p>
+                    The goal is to revolutionize the dairy sector by equipping space agents (milk collectors) 
+                    with the necessary tools to streamline data collection at the last mile. 
+                    Space agents work alongside existing cooperatives to deliver a 
+                    modern value proposition while leveraging the established farmer networks & Dairy Value Chain.
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'images/cow_head.svg' %}" class="pull-left img-fluid d-block mx-auto center-block" alt="" style="float: left;">
+        </div>
+        <div class="col-md-4 why offset-md-1">
+            <div class="container">
+                <h1>the need</h1> 
+                <img src="{% static 'images/skwigli_line.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+                <ul class="list" style="list-style: none;">
+                    <li><i class="icon-check"> </i>
+                        <h3>Cash Flow Challenges</h3><br> 
+                        <p>Cooperatives are burdened by delayed payments, transparency issues, and limited access to funds, 
+                            primarily due to challenges with reconciling disaggregated data and documentation. 
+                            Consequently, farmers experience difficulties in conveniently accessing the finance they need
+                        </p>
+                    </li>
+                    <hr>
+                    <li><i class="icon-check"> </i>
+                        <h3>Service Access in Dairy Farming</h3><br> 
+                        <p>
+                            Inadequate extension services hinder dairy farmers' access to crucial information and support, 
+                            limiting their ability to optimize production and achieve sustainable growth in the value chain.
+                        </p>
+                    </li>
+                </ul>
+                <br>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<!-- our solution -->
+<section id="solution" class="services bg-light">
+    <div class="container">
+        <div class="space100"></div>
+        <div class="about-inline text-center">
+            <h3 style="color: #02407B;">Our Solution</h3>
+            <img src="{% static 'images/skwigli_line.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+        </div>
+        <div class="container-fluid">
+            <img src="{% static 'images/our_solution.svg' %}" class="img-fluid d-block mx-auto" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- our team -->
+<div class="intro intro-why">
+    <div class="row center-content">
+        <div class="container">
+            <div class="col-md-9 why about-inline text-center">
+                <h1>Our Team</h1> 
+                <img src="{% static 'images/skwigli_line.svg' %}" class="img-fluid d-block mx-auto center-block" alt=""><br>
+            </div>
+        </div>
+    </div>
+    <div class="container-flex">
+        <div class="row">
+            <div class="col-md">
+                <img src="{% static 'images/team/ramah.svg' %}" class="img-fluid d-block mx-auto" alt="" >
+            </div>
+            <div class="col-md">
+                <img src="{% static 'images/team/erick.svg' %}" class="img-fluid d-block mx-auto" alt="" >
+            </div>
+            <div class="col-md">
+                <img src="{% static 'images/team/harry.svg' %}" class="img-fluid d-block mx-auto" alt="" >
+            </div>
+            <div class="col-md">
+                <img src="{% static 'images/team/mwas.svg' %}" class="img-fluid d-block mx-auto" alt="" >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space100"></div>
+{% endblock %}
+
+{% block local_syling %}
+<style>
+    /* header start */
+    .logo{
+        position: absolute;
+        width: 141px;
+        height: 45px;
+    } 
+    /*  INTRO STYLES */
+    .intro {
+        position: relative;
+    }
+    .overlay {
+        background: #151515;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*  Intro */
+    .intro1 {
+        background-image: url({% static 'images/main_background.svg' %});
+        background-size: cover;
+        background-position: 70% 38%;
+        padding: 0 0 0 0;
+    }
+
+    .intro1 h2 {
+        color: #fff;
+        font-size: 72px;
+        text-transform: none;
+        font-weight: 900;
+        margin: 0 0 15px;
+    }
+
+    .intro1 p {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .blue,
+    .rectangle {
+        position: absolute;
+        height: 853px;
+        top: 0;
+    }
+
+    .blue {
+        background: linear-gradient(90deg, #024d94 0%,#024d94a9 70%, #024d9475 90%,#024d9400 100%);
+        padding: 130px 5% 0 5%;
+        position: relative;
+    }
+
+
+    .text-center{
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        position: center;
+        left: 7.08%;
+        right: 60.14%;
+    }
+	
+    @media only screen and (min-width: 993px)  and (max-width: 4000px) {
+        .center-content {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+    @media only screen and (min-width: 300px)  and (max-width: 576px) {
+        .intro1 h2 {
+        color: #fff;
+        font-size: 62px;
+        text-transform: none;
+        font-weight: 900;
+        margin: 0 0 15px;
+    } 
+
+    .navbar-collapse {
+      transition: height 0.3s ease;
+    }
+
+    ul{
+      display:none;
+    }
+
+    ul.active{
+      display:block;
+    }
+</style>
+{% endblock %}
+
+{% block doc_ready %}
+// <script>
+// JavaScript to close the navbar after a link is clicked in phone view
+const links = document.querySelectorAll('.navbar-nav .nav-link');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navbarCollapse.classList.remove('show');
+    });
+});
+{% endblock %}
