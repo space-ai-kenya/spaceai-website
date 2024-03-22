@@ -10,7 +10,7 @@ services:
     volumes: 
       - ./spaceai/.:/var/www/.
     command: >
-      sh -c "python manage.py collectstatic --noinput && uvicorn spaceai.asgi:application --host 0.0.0.0"
+      sh -c "python manage.py collectstatic --noinput && uvicorn spaceai.asgi:application --host 172.178.97.131"
 
     
 
