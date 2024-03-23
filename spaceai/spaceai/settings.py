@@ -46,6 +46,10 @@ MIDDLEWARE = [
     'compression_middleware.middleware.CompressionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
@@ -73,6 +77,22 @@ WSGI_APPLICATION = 'spaceai.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+CACHE_MIDDLEWARE_SECONDS = 30
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://host.docker.internal:6379/",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "PASSWORD": "redis123"
+        },
+    }
+}
+
+CACHE_MIDDLEWARE_ALIAS = "default"  # or whatever alias you want to use
+CACHE_MIDDLEWARE_SECONDS = 1000 # number of seconds each page should be cached.
+CACHE_MIDDLEWARE_KEY_PREFIX = ''  # name of site if multiple sites are used
+
 
 DATABASES = {
     'default': {

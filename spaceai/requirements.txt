@@ -4,5 +4,7 @@ gunicorn
 whitenoise[brotli]
 django-compressor
 django-compression-middleware
+django-redis
+pillow
 cssmin
 jsmin

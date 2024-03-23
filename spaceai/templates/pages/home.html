@@ -1,7 +1,7 @@
 {% extends '../base.html' %}
 {% load compress %}
 {% load static %}
-
+{% load cache %}
 
 <!-- header -->
 {% block header %}
@@ -272,7 +272,7 @@
 
     /*  Intro */
     .intro1 {
-        background-image: url({% static 'images/main_background.svg' %});
+        background-image: url({% static 'images/main_background.png' %});
         background-size: cover;
         background-position: 70% 38%;
         padding: 0 0 0 0;
