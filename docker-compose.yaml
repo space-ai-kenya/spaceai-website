@@ -1,16 +1,43 @@
 version: "3.7"
 
 services:
+  redis:
+    container_name: redis
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    environment:
+      REDIS_PASSWORD: "redis123"
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+      
+
+  redis_replica:
+    container_name: redis_replica
+    image: redis:alpine
+    ports:
+      - "6380:6379"
+    command: redis-server --slaveof redis 6379 --masterauth redis123
+      
   webapp:
     container_name: space-frontend
     build:
       context: ./spaceai/.
     ports:
       - "2467:8000"
+    depends_on:
+      - redis
+      - redis_replica
+    # healthcheck:
+    #   test: ['CMD','python','manage.py','check']
+    #   interval: 10s
+    #   timeout: 15s
+    #   retries: 2
     volumes: 
       - ./spaceai/.:/var/www/.
     command: >
-      sh -c "python manage.py collectstatic --noinput && uvicorn spaceai.asgi:application --host 0.0.0.0"
+      sh -c "python manage.py collectstatic --noinput && python manage.py compress --force && uvicorn spaceai.asgi:application --host 0.0.0.0"
 
     
 

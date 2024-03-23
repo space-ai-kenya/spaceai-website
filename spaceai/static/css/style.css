@@ -158,7 +158,6 @@
 /*  Intro  */
 
 .hero2 {
-	background: url(../images/bg/2.jpg) no-repeat center;
 	background-size: cover;
 	padding: 190px 0 0;
 	margin-bottom: 40px;
@@ -237,7 +236,6 @@
 /*  Intro  */
 
 .intro3 {
-	background: #000000 url(../images/bg/3.jpg) no-repeat center;
 	background-size: cover;
 	padding: 114px 0 0;
 }
@@ -321,7 +319,6 @@
 /*  Intro */
 
 .intro4 {
-	background: #000000 url(../images/bg/4.jpg) no-repeat top center;
 	background-size: cover;
 	padding: 220px 0 0;
 	margin-bottom: 20px;
@@ -358,7 +355,6 @@
 /*  Intro  */
 
 .intro5 {
-	background: #000000 url(../images/bg/5.jpg) no-repeat center;
 	background-size: cover;
 	padding: 150px 0 0;
 }
@@ -400,7 +396,6 @@
 /*  Intro */
 
 .intro6 {
-	background: #000000 url(../images/bg/6.jpg) no-repeat center;
 	background-size: cover;
 	padding: 0;
 	height: 100vh;
@@ -450,7 +445,6 @@
 /*  Intro */
 
 .intro7 {
-	background: #000000 url(../images/bg/7.jpg) no-repeat center;
 	background-size: cover;
 	padding: 185px 0 130px;
 }
@@ -542,7 +536,6 @@ margin-bottom: 5px;
 
 
 .intro8 {
-	background: #000000 url(../images/bg/8.jpg) no-repeat center;
 	background-size: cover;
 	padding: 160px 0 0;
 }
@@ -573,7 +566,6 @@ margin-bottom: 5px;
 /*  Intro */
 
 .intro9 {
-	background: #000000 url(../images/bg/9.jpg) no-repeat center;
 	background-size: cover;
 	padding: 180px 0 0;
 	overflow: hidden;
@@ -1194,7 +1186,6 @@ margin-bottom: 5px;
 /*  PAGE HEADER */
 
 .page_head {
-	background: url(../images/bg/1.jpg) no-repeat top center;
 	background-size: cover;
 	padding: 160px 0 80px;
 }
@@ -1449,7 +1440,7 @@ margin-bottom: 5px;
 
 /* patners section */
 .patners {
-	background-image: url(../images/patners/background.svg);
+	background-image: url("/static/images/patners/background.svg");
 	background-size: cover;
 	padding-top: 50px;
 }
@@ -1967,7 +1958,6 @@ margin-bottom: 5px;
 }
 
 .success-ico {
-	background: url(../images/success.png);
 	width: 25px;
 	height: 25px;
 	float: left;
@@ -1978,7 +1968,6 @@ margin-bottom: 5px;
 }
 
 .error-ico {
-	background: url(../images/error.png);
 	width: 25px;
 	height: 25px;
 	float: left;
@@ -2156,20 +2145,14 @@ margin-bottom: 5px;
 }
 
 .bg-available{
-	background: #f8d171 url(../images/bg/icons.png) repeat center;
 	padding: 110px 0;
 }
 
-.bg-primary-image {
-	background:url(../images/5.jpg);
-}
+/* .bg-primary-image {
+} */
 
 .bg-dark {
 	background: #222;
-}
-
-.bg-dark-image {
-	background:url(../images/6.jpg);
 }
 
 .nav-tabs {

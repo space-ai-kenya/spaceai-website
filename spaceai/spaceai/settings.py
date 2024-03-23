@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-$yda!#o@gkjndy-m)(^5h#7_evdjzl9@0%v+f@e=ave_65qmtk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.178.97.131']
+ALLOWED_HOSTS = ['172.178.97.131','localhost']
 
 
 # Application definition
@@ -24,10 +24,17 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    "whitenoise.runserver_nostatic",
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    "compressor",
+    "cssmin",
+    "jsmin",
     'home'
 ]
+# Whitenoise cache policy
+WHITENOISE_MAX_AGE = 31536000 if not DEBUG else 0 # 1 year
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -36,6 +43,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'compression_middleware.middleware.CompressionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -108,9 +116,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR , 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles')
